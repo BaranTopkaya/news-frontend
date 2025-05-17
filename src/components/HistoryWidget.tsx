@@ -8,6 +8,7 @@ import "./HistoryWidget.css"
 
 const HistoryWidget: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
+  // Only use selector on the client side
   const historyItems = useSelector((state: RootState) => state.history.items)
 
   return (

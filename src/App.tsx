@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useEffect } from "react"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 import { Provider } from "react-redux"
 import { store } from "./store"
 import Header from "./components/Header"
@@ -24,6 +24,8 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/news/:id" element={<NewsDetailPage />} />
+            {/* Redirect /HomePage to / */}
+            <Route path="/HomePage" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
       </Router>
