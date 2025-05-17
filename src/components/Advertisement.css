@@ -1,0 +1,97 @@
+.ad-container {
+  position: fixed;
+  top: 150px;
+  width: 160px;
+  height: auto;
+  background-color: white;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.ad-container.left {
+  left: calc(50% - 750px);
+}
+
+.ad-container.right {
+  right: calc(50% - 750px);
+}
+
+.ad-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 2;
+  color: #333;
+}
+
+.ad-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.ad-brand span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.ad-products {
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-product {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.ad-product:last-child {
+  border-bottom: none;
+}
+
+.ad-product-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.ad-product-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.ad-product-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.discount {
+  background-color: #006400;
+  color: white;
+  padding: 2px 5px;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1400px) {
+  .ad-container {
+    display: none;
+  }
+}
