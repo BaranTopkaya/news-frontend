@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/finance")
+    fetch("https://news-backend-q17r.onrender.com/api/finance")
       .then((response) => response.json())
       .then((data) => setFinanceData(data))
       .catch((error) => console.error("Error fetching finance data:", error))

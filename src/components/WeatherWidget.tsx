@@ -10,7 +10,7 @@ const WeatherWidget: React.FC = () => {
   const [selectedCity] = useState("İzmir")
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/weather")
+    fetch("https://news-backend-q17r.onrender.com/api/weather")
       .then((response) => response.json())
       .then((data) => setWeatherData(data))
       .catch((error) => console.error("Error fetching weather data:", error))

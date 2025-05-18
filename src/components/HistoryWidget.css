@@ -71,3 +71,19 @@
     width: 250px;
   }
 }
+
+.loading-history,
+.error-history {
+  padding: 15px;
+  text-align: center;
+  margin: 0;
+}
+
+.loading-history {
+  color: #666;
+  font-style: italic;
+}
+
+.error-history {
+  color: #d32f2f;
+}

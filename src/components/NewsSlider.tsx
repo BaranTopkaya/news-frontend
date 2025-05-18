@@ -14,7 +14,7 @@ const NewsSlider: React.FC = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/news")
+    fetch("https://news-backend-q17r.onrender.com/api/news")
       .then((response) => response.json())
       .then((data) => setNews(data))
       .catch((error) => console.error("Error fetching news:", error))
@@ -41,7 +41,7 @@ const NewsSlider: React.FC = () => {
     dispatch(addToHistory(newsItem.title))
 
     // Also send to backend
-    fetch("http://localhost:8080/api/history/add?title=" + encodeURIComponent(newsItem.title), {
+    fetch("https://news-backend-q17r.onrender.com/api/history/add?title=" + encodeURIComponent(newsItem.title), {
       method: "POST",
     }).catch((error) => console.error("Error adding to history:", error))
   }

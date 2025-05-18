@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
   const [secondaryNews, setSecondaryNews] = useState<News | null>(null)
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/news")
+    fetch("https://news-backend-q17r.onrender.com/api/news")
       .then((response) => response.json())
       .then((data) => {
         // Get a random news item for the secondary news section
